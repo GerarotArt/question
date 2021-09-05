@@ -1,4 +1,6 @@
 import React,{ useState , useEffect } from "react"
+import {Breadcrumb} from "./components/breadcrumb"
+
 export default function Questionone() {
     const [valueText , setValueText] = useState({
         number : '',
@@ -73,6 +75,7 @@ export default function Questionone() {
     },[valueText])
     return(
         <>
+        <Breadcrumb page="Question1"/>
         <div className="container-fluid">
             <div className="boxbig">
                 <div className="boxone">

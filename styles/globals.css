@@ -40,3 +40,35 @@ a {
 div.dataTables_paginate {
   float: right;
 }
+.card{
+  width: 350px;
+  height: 200px;
+  padding : 20px;
+}
+.box-card{
+  display: flex;
+  justify-content: center;
+  min-height: 90vh;
+  height: 90vh;
+  align-items: center;
+}
+.box-img{
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 15px;
+}
+.img-question{
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+label.title-question {
+  font-size: 18px;
+  line-height: 30px;
+}
+.breadcrumb{
+  background-color: #FFFF;
+}
