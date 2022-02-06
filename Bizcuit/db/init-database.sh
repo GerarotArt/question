@@ -3,7 +3,6 @@ set -e
 export PGPASSWORD=$POSTGRES_PASSWORD;
 psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-EOSQL
 		CREATE DATABASE bizcuit;
-		BEGIN;
     CREATE TABLE beer (
     id  int NOT NULL PRIMARY KEY,
     uid  varchar(255) NOT NULL,
@@ -18,5 +17,4 @@ psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-E
 		blg varchar(255) NOT NULL,
 		randomcount int NOT NULL DEFAULT 0
     );
-		COMMIT;
 EOSQL
