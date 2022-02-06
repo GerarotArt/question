@@ -89,7 +89,7 @@ export default function ListPage() {
         return error.response;
       });
     if (result.status === 200) {
-      Notification(result.data.message, 'success');
+      Notification(result.data.message, result.data.status);
     } else {
       Notification(result.data.message, 'error');
     }
