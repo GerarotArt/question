@@ -10,8 +10,10 @@ services:
       POSTGRES_PASSWORD: example
       POSTGRES_USER: postgres
       POSTGRES_DB: bizcuit
-    # volumes:
-    #    - ./db:/docker-entrypoint-initdb.d/
+      APP_DB_USER: postgres_test
+      APP_DB_PASS: example
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/
 
   mongodb_server:
     image: mongo
