@@ -1,0 +1,19 @@
+.box_title_list {
+  width: 100%;
+  display: flex;
+}
+.box_title_page,
+.box_tilte_btn {
+  width: 50%;
+}
+.box_btn_submit {
+  text-align: center;
+}
+.box-next-previous {
+  display: flex;
+  padding: 30px 0px;
+}
+.box-previous,
+.box-next {
+  width: 50%;
+}
