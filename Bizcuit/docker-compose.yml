@@ -10,6 +10,9 @@ services:
       POSTGRES_PASSWORD: example
       POSTGRES_USER: postgres
       POSTGRES_DB: bizcuit
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./createtable.sql:/docker-entrypoint-initdb.d/createtable.sql
     # volumes:
     #  - ./db:/docker-entrypoint-initdb.d/
 
