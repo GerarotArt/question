@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const beercon = require('./controllers/BeerControllers');
-const client = require('./db/connection');
+const pool = require('./db/connection');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
@@ -10,7 +10,7 @@ app.options('*', cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-client.connect();
+pool.connect();
 const middleware = () => (req, res, next) => {
   // console.log(req.query);
   next();
